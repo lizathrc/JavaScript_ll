@@ -77,19 +77,19 @@ es la tercera parte de la de Elena */
 // nombre del producto, cantidad, subtotal, descuento a aplicar y el precio final a
 // pagar.
 
-// let Product = prompt('write a product')
-// let Price = parseInt (prompt('write a price'))
-// let Amount = parseInt (prompt('write the amount'))
+let Product = prompt('write a product')
+let Price = parseInt (prompt('write a price'))
+let Amount = parseInt (prompt('write the amount'))
 
-//  if (Amount >= 3){
-//       Amount -= (Amount * 0.10);
-//  }
-//   else if (Amount > 5){
-//       Amount -= (Amount * 0.20);
-//  }
-//  else{
-//   Amount = Amount;
-//  }
+ if (Amount >= 3){
+      Amount -= (Amount * 0.10);
+ }
+  else if (Amount > 5){
+      Amount -= (Amount * 0.20);
+ }
+ else{
+  Amount = Amount;
+ }
 
 //  alert ('you have to pay ' + Product + ' for ' + Amount * Price + ' your discount is ' + Amount +'% ' + 'total ' + Amount + Price + ' discount');
 
