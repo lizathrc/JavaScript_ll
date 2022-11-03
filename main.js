@@ -2,15 +2,9 @@
 imprimir la edad de Lucía dentro de siete años, siendo que la edad de Lucía
 es la tercera parte de la de Elena */
 
-// let elena;
-// elena = prompt ('put elena age');
-
-// let lucia;
-
-// while (lucia = parseInt(elena/3)+7) {
-//   alert('lucia has ' + lucia)
-//   break;
-// };
+// const elena = Number (prompt('write elena age'));
+// const lucia = Number (parseInt((elena/3)+7));
+// alert ('lucia would have ' + lucia);
 
 
 // 2. Cree un programa que calcule la posible edad de una persona en un año
@@ -19,79 +13,85 @@ es la tercera parte de la de Elena */
 // al año actual del usuario. Ejemplo: Si el usuario está en el año 2022 no puede
 // ingresar un valor menor a dicho año para hacer el cálculo de la edad.
 
-// let year;
-// year = prompt('write your actual year');
-// let year2;
-// year2 = prompt ('write a year');
-// let result = year - year2;
+// const currentAge = Number (prompt('write your current age'));
+// const currentYear = Number (prompt('write your current year'));
+// const anotherYear = Number(prompt('write another year older than the current year'));
+// const result = (anotherYear-currentYear) + currentAge;
 
-// if (year2 <= year) {
-//   alert('you need to write a higher year')
-// } 
-// else if (year2>year) {
-//   alert('the age is ' + result)
+// if (anotherYear <= currentYear) {
+//   alert ('the year has to be older than the current year');
 // };
+// alert ('you would have ' + result + ' years old');
 
 // 3. Haga un programa que reciba como entrada el año de matrimonio del abuelo
 // de Alberto. Encontrar la edad de la abuela de Alberto a hoy, si es 7 años
 // menor que el abuelo de Alberto, y en el año del matrimonio, el abuelo tenía
 // 25 años.Debe imprimir la edad de la abuela de Alberto.
 
-// let marriage = prompt('enter a year');
+// const yearMarriage = Number (prompt ('write the year the granpa got married'));
+// const currentYear2 = Number (prompt ('write the current year'));
+// const granmaYear = 25 - 7;
+// const result = (currentYear2 - yearMarriage) + granmaYear;
+// alert ('granma is ' + result + ' years old');
 
-// let grandma;
-// grandma =  (25 - 7) + marriage;
+/*4. Cree un programa que le permita al usuario convertir grados Fahrenheit a
+Celsius o viceversa. El programa debe recibir el tipo de conversión que se
+desea realizar, siendo la letra “F” para Fahrenheit y “C” para Celsiu, y el valor
+a convertir. El programa no recibirá el valor a convertir hasta que se haya
+ingresado correctamente el tipo de conversión que se desea realizar. Debe
+imprimir mostrando el resultado de la conversión: N°C/F = N°C/F. Si el tipo de
+conversión no es válido debe imprimir: “Tipo de conversión no reconocido”
+Fórmula Celsius a Fahrenheit
+(n°C × 9/5) + 32
+Fórmula Fahrenheit a Celsius
+((nc - 32) × 5) / 9*/
 
-// alert('grandma');
+// const option = prompt('f. Celsius to Fahrenheit c. Fahrenheit to Celsius');
+// const degree = prompt('Write a number degree');
+// let number; //saber que hay que dejar una variable vacia me costo
 
-// 4. Cree un programa que le permita al usuario convertir grados Fahrenheit a
-// Celsius o viceversa. El programa debe recibir el tipo de conversión que se
-// desea realizar, siendo la letra “F” para Fahrenheit y “C” para Celsiu, y el valor
-// a convertir. El programa no recibirá el valor a convertir hasta que se haya
-// ingresado correctamente el tipo de conversión que se desea realizar. Debe
-// imprimir mostrando el resultado de la conversión: N°C/F = N°C/F. Si el tipo de
-// conversión no es válido debe imprimir: “Tipo de conversión no reconocido”
-// Fórmula Celsius a Fahrenheit
-// (n°C × 9/5) + 32
-// Fórmula Fahrenheit a Celsius
-// ((n°F - 32) × 5) / 9
+// const fahrenheit = ((degree * 9/5) + 32);
+// const celsius = (((degree - 32) * 9)/9);
 
-// const Option = Number(prompt('1. Celsius to Fahrenheit, 2. Fahrenheit to Celsius'));
-//           n1 = prompt('Write a number');
+// if (option === 'f') {
+//   number = (fahrenheit);
+//   alert (degree + '°C = ' + number + '°F')
+// } else if (option === 'c') {
+//   number = (celsius);
+//   alert (degree + '°F = ' + number + '°C')
+// }else {
+//   alert ('no a valid choice')
+// };
 
-// let value1 = parseInt(n1);
+/*5. Haga un programa que reciba el nombre de un producto, el precio de este y
+cantidad a comprar, si la persona compra 3 se le aplicará un descuento de
+10%, si lleva 5 o más un descuento de 20%. Debe imprimir una tabla con el
 
-//     if (Option == 1) {
-//       let resultado = (n1 * 9/5) + 32;
-//       alert('Celsius to Fahrenheit : ' + resultado + 'F');
-//   } else if (option == 2) {
-//       let resultado = ((n1 - 32) * 5) / 9;
-//       alert('Fahrenheit to Celsius : ' + resultado + 'C');
-//   };
+nombre del producto, cantidad, subtotal, descuento a aplicar y el precio final a
+pagar.*/
 
+// const Product = prompt('write a product')
+// const Price = Number (prompt('write a price'));
+// const Amount = Number (prompt('write the amount'));
+// const discount10 = Price * Amount * 0.1;
+// const discount20 = Price * Amount * 0.2; 
+// const subtotal = Price * Amount;
+// let finalPrice;
 
-// 5. Haga un programa que reciba el nombre de un producto, el precio de este y
-// cantidad a comprar, si la persona compra 3 se le aplicará un descuento de
-// 10%, si lleva 5 o más un descuento de 20%. Debe imprimir una tabla con el
+//  if (Amount >= 3 && Amount < 5){
+//       finalPrice = (Price * Amount - discount10);
+//       alert ('product = ' + Product + ' amount = ' + Amount + ' subtotal = ' + subtotal + ' discount applied ' + discount10 + ' final price ' + finalPrice );
+//  }
+//   else if (Amount >= 5){
+//     finalPrice = (Price * Amount - discount20);
+//     alert ('product = ' + Product + ' amount = ' + Amount + ' subtotal = ' + subtotal + ' discount applied ' + discount20 + ' final price ' + finalPrice );
+//   }
+//  else{
+//   finalPrice = (Price * Amount);
+//   alert ('product = ' + Product + ' amount = ' + Amount + ' subtotal = ' + subtotal + ' discount applied = none ' + ' final price ' + finalPrice );
 
-// nombre del producto, cantidad, subtotal, descuento a aplicar y el precio final a
-// pagar.
+//  }
 
-let Product = prompt('write a product')
-let Price = parseInt (prompt('write a price'))
-let Amount = parseInt (prompt('write the amount'))
-
- if (Amount >= 3){
-      Amount -= (Amount * 0.10);
- }
-  else if (Amount > 5){
-      Amount -= (Amount * 0.20);
- }
- else{
-  Amount = Amount;
- }
-
-//  alert ('you have to pay ' + Product + ' for ' + Amount * Price + ' your discount is ' + Amount +'% ' + 'total ' + Amount + Price + ' discount');
 
 // 6. Haga un programa que reciba las notas de tres exámenes realizados por un
 // estudiante en un curso, el primer examen tiene un valor de 25% de la nota
@@ -102,20 +102,25 @@ let Amount = parseInt (prompt('write the amount'))
 // en el curso, pero uno de los exámenes tuvo nota menor a 50 debe ir a
 // ampliación. Si el estudiante obtuvo nota menor a 60 reprueba el curso.
 
+// const score1 = Number (parseInt(prompt('first score')));
+// const score2 = Number (parseInt(prompt('second score')));
+// const score3 = Number (parseInt(prompt('third score')));
+// const finalScore = (score1 * 0.25) + (score2 * 0.35) + (score3 * 0.40)
 
-// let = Min = (0)
-// let = Max = (100)
+// if (finalScore < 70 && finalScore > 59) {
+//   alert ('ampliacioneningles ' + finalScore);
+// } else if (finalScore > 70 && score1 < 50 || score2 < 50 || score3 < 50){
+//   alert ('ampliacioneningles again ' + finalScore)
+// }else if (finalScore < 60){
+//   alert ('fail' + finalScore)
+// }else if (finalScore >= 70){
+//   alert ('you r good ' + finalScore)
+// }else {
+//   alert('study more')
+// };
 
-// let  Average;
-// Average = prompt("Write your score");
-
-// if (Average == 0 && Average < 65)
-// {alert("extension ")}
-// else if (Average >= 65 && Average < 70) 
-// {alert("made it ")}
-// else if (Average > 70 && Average <= 85) 
-// {alert("not bad ")}
-// else if (Average > 85 && Average <= 99) 
-// {alert("very good ")}
-// else if (Average == 100 ) 
-// {alert("excelent ")}; 
+/* NOTAS: lo que mas me cuesta es saber cuales son las operaciones
+que se utilizan para sacar los resultados, saber si hay que suma, multiplicar
+o restar. Tambien el pensar en si debo o no dejar variables vacias para que 
+guarden un resultado. Pero ya voy entendiendo mucho mejor
+y logre realizar esta practica*/
