@@ -6,7 +6,18 @@ que las ganancias se iban a repartir de la siguiente forma 20 % para Loki, 35
 ganancias serán 25 % para Loki, 35 % para Jorgito y 40 % para Jorcito.
 Haga un programa que reciba la cantidad total de limonadas que vendieron, e
 imprima cuánto ganó cada uno de ellos.*/
+const amountLemon = Number (prompt('how many lemon juice do you sell?'));
+const earn = Number (amountLemon * 300 - 110.50);
+let loki;
+let jorgito;
+let jorcito;
 
+if (amountLemon < 100) {
+  loki = Number(earn / 0.20);
+  jorgito = Number (earn / 0.35);
+  jorcito = Number (earn / 0.45);
+  alert ('loki earn: ' + loki + ' jorgito earn: ' + jorgito + ' jorcito earn: ' + jorcito );
+};
 
 
 /*2. Haga un programa que reciba tres números enteros diferentes e indique cuál
